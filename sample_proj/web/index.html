@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>AdBrix Remaster Hybrid Sample</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+    <style>
+      .bottom-margin {
+        margin-bottom: 100px;
+      }      
+    </style>
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">AdBrix Remaster</a>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead bg-primary text-white text-center">
+      <div class="container">        
+        <h1 class="text-uppercase mb-0">AdBrix Remaster Hybrid Sample</h1>
+        <hr class="star-light">
+        <h2 class="font-weight-light mb-0">애드브릭스 리마스터를 하이브리드 앱에 연동하는 기본 샘플입니다.</h2>
+      </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section class="portfolio" id="portfolio">
+      <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">주요 API</h2>
+        <hr class="star-dark mb-5" style="margin-bottom: 100px !important;">
+        <div class="row">
+          <div class="col-md-6 col-lg-4 bottom-margin">
+            <a class="portfolio-item d-block mx-auto" href="#commerce-purchase-modal">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fas fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <h3>1.구매</h3>
+              <p>앱 내에서 구매가 발생했을 때에 purchase api를 이용하여 구매가 발생한 상품의 상세 정보가 포함된 이벤트를 전달합니다.</p>
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 bottom-margin">
+            <a class="portfolio-item d-block mx-auto" href="#commerce-productView-modal">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fas fa-search-plus fa-3x"></i>
+                </div>
+              </div>     
+              <h3>2.상품상세 보기</h3>
+              <p>고객이 특정 상품의 상세 정보가 있는 상세 페이지로 진입했을 때 productView api를 이용하여 상품의 상세 정보가 포함된 이벤트를 전달합니다.</p>
+         
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 bottom-margin">
+            <a class="portfolio-item d-block mx-auto" href="#commerce-addtocart-modal">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fas fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <h3>3.장바구니 담기</h3>
+              <p>고객이 특정 상품을 장바구니에 담았을 때에 addToCart api를 이용하여 장바구니에 담긴 상품 상세 정보가 포함된 이벤트를 전달합니다.</p>
+
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 bottom-margin">
+            <a class="portfolio-item d-block mx-auto" href="#commerce-viewlist-modal">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fas fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <h3>4.상품리스트 보기</h3>
+              <p>고객이 상품 리스트를 보았을 때에 listView api를 이용하여 노출된 상품 리스트 정보가 포함된 이벤트를 전달합니다.</p>
+
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 bottom-margin">
+            <a class="portfolio-item d-block mx-auto" href="#commerce-addtowishlist-modal">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fas fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <h3>5.관심상품 추가</h3>
+              <p>고객이 특정 상품을 관심상품으로 추가했을 때에 addToWishList api를 이용하여 관심상품으로 추가된 상품의 정보가 포함된 이벤트를 전달합니다.</p>
+
+            </a>
+          </div>
+          <div class="col-md-6 col-lg-4 bottom-margin">
+            <a class="portfolio-item d-block mx-auto" href="#commerce-share-modal">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fas fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <h3>6. 공유하기</h3>
+              <p>고객이 특정 상품을 공유했을 때에 share api를 이용하여 공유된 상품의 정보가 포함된 이벤트를 전달합니다.</p>
+
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- Footer -->
+    <footer class="copyright py-4 text-center text-white">
+      <div class="container">
+        <h4 class="text-uppercase mb-4" style="margin-top:20px !important;">AdBrix Remaster</h4>   
+      </div>
+    </footer>
+   
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-to-top d-lg-none position-fixed ">
+      <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+
+    <!-- Purchase Modal 1 -->
+    <div class="portfolio-modal mfp-hide" id="commerce-purchase-modal">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">구매하기</h2>
+              <hr class="star-dark mb-5" style="margin-bottom:100px !important;">
+              <p class="mb-5">고객이 상품을 구매했을 때, 구매한 상품의 상세 정보를 포함하여 구매 이벤트를 전달합니다.</p>
+              <p class="mb-5">purchase api 를 이용하여야 하며 주문번호, 상품아이디, 상품명, 상품단가, 구매수량, 상품 카테고리 정보를 필수로 전달하여야 합니다.</p>
+              <p class="mb-5">본 샘플에서는 adbrix://purchase? 와 같은 JavaScript Interface를 구성하여 데이터를 전달합니다.</p>
+              <p class="mb-5">아래 데이터 중 * 표시가 된 것은 필수 전달 데이터 항목입니다.</p>
+              <div class="row">
+                <div class="col-lg-10 mx-auto">
+                  <form name="purchaseMessage" id="purchaseForm" novalidate="novalidate">
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>*Order Id</label>
+                        <input class="form-control" id="order_id" type="text" placeholder="*주문번호" required="required" data-validation-required-message="주문번호를 입력해주세요." aria-invalid="false">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Product Id</label>
+                        <input class="form-control" id="product_id" type="text" placeholder="*상품아이디" required="required" data-validation-required-message="상품아이디를 입력해주세요." aria-invalid="false">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Product Name</label>
+                        <input class="form-control" id="product_name" type="text" placeholder="*상품명" required="required" data-validation-required-message="상품명을 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Unit Price</label>
+                        <input class="form-control" id="unit_price"  type="number" step="0.01" placeholder="*상품단가" required="required" data-validation-required-message="상품단가(type:double)를 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Quantity</label>
+                        <input class="form-control" id="quantity"  type="number" placeholder="*구매수량" required="required" data-validation-required-message="구매수량(type:int)을 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Discount</label>
+                        <input class="form-control" id="discount"  type="number" step="0.01" placeholder="할인금액" required="optional" data-validation-required-message="할인금액(type:double)을 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Product Catogory</label>
+                        <input class="form-control" id="product_category"  type="text" placeholder="상품 카테고리(A.B.C.D.E)" required="optional" data-validation-required-message="상품 카테고리 정보를 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Currency Code</label>
+                        <input class="form-control" id="currency_code"  type="text"  placeholder="구매화폐단위(KRW, USD, ...)" required="optional" data-validation-required-message="구매 화폐 단위를 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-primary btn-xl" >Call Native Function</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal mfp-hide" id="commerce-viewlist-modal">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">상품리스트 보기</h2>
+              <hr class="star-dark mb-5" style="margin-bottom:100px !important;">
+              <p class="mb-5">고객이 여러개의 상품이 노출되는 리스트로 진입했을 때, 노출된 상품들의 상세 정보를 포함하여 상품리스트보기 이벤트를 전달합니다.</p>
+              <p class="mb-5">viewList api 를 이용하여야 하며 상품아이디, 상품명, 상품단가, 상품 카테고리 정보를 필수로 전달하여야 합니다.</p>
+              <p class="mb-5">본 샘플에서는 adbrix://listView? 와 같은 JavaScript Interface를 구성하여 데이터를 전달합니다.</p>
+              <p class="mb-5">아래 데이터 중 * 표시가 된 것은 필수 전달 데이터 항목입니다.</p>
+              <div class="row">
+                  <div class="col-lg-10 mx-auto">
+                    <form name="viewListMessage" id="viewListForm" novalidate="novalidate">                      
+                      <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                          <label>Product Id</label>
+                          <input class="form-control" id="product_id" type="text" placeholder="*상품아이디" required="required" data-validation-required-message="상품아이디를 입력해주세요." aria-invalid="false">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                          <label>Product Name</label>
+                          <input class="form-control" id="product_name" type="text" placeholder="*상품명" required="required" data-validation-required-message="상품명을 입력해주세요.">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                          <label>Unit Price</label>
+                          <input class="form-control" id="unit_price"  type="number" step="0.01"  placeholder="*상품단가" required="required" data-validation-required-message="상품단가를 입력해주세요.">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                          <label>Quantity</label>
+                          <input class="form-control" id="quantity"  type="number" placeholder="*구매수량" required="required" data-validation-required-message="구매수량을 입력해주세요.">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                          <label>Discount</label>
+                          <input class="form-control" id="discount"   type="number" step="0.01" placeholder="할인금액" required="optional" data-validation-required-message="할인금액을 입력해주세요.">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                          <label>Product Catogory</label>
+                          <input class="form-control" id="product_category"  type="text" placeholder="상품 카테고리(A.B.C.D.E)" required="optional" data-validation-required-message="상품 카테고리 정보를 입력해주세요.">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                          <label>Currency Code</label>
+                          <input class="form-control" id="currency_code"  type="text"  placeholder="구매화폐단위(KRW, USD, ...)" required="optional" data-validation-required-message="구매 화폐 단위를 입력해주세요.">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                      <br>
+                      <div id="success"></div>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-xl" >Call Native Function</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product View Modal -->
+    <div class="portfolio-modal mfp-hide" id="commerce-productView-modal">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">상품상세 보기</h2>
+              <hr class="star-dark mb-5" style="margin-bottom:100px !important;">
+              <p class="mb-5">고객이 상품의 상세페이지로 진입했을 때, 상품의 상세 정보를 포함하여 상품상세보기 이벤트를 전달합니다.</p>
+              <p class="mb-5">productView api 를 이용하여야 하며 상품아이디, 상품명, 상품단가, 상품 카테고리 정보를 필수로 전달하여야 합니다.</p>
+              <p class="mb-5">본 샘플에서는 adbrix://productView? 와 같은 JavaScript Interface를 구성하여 데이터를 전달합니다.</p>
+              <p class="mb-5">아래 데이터 중 * 표시가 된 것은 필수 전달 데이터 항목입니다.</p>
+              <div class="row">
+                <div class="col-lg-10 mx-auto">
+                  <form name="productViewMessage" id="productViewForm" novalidate="novalidate">
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Product Id</label>
+                        <input class="form-control" id="product_id" type="text" placeholder="*상품아이디" required="required" data-validation-required-message="상품아이디를 입력해주세요." aria-invalid="false">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Product Name</label>
+                        <input class="form-control" id="product_name" type="text" placeholder="*상품명" required="required" data-validation-required-message="상품명을 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Unit Price</label>
+                        <input class="form-control" id="unit_price"  type="number" step="0.01" placeholder="*상품단가" required="required" data-validation-required-message="상품단가를 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Quantity</label>
+                        <input class="form-control" id="quantity"  type="number" placeholder="*구매수량" required="required" data-validation-required-message="구매수량을 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Discount</label>
+                        <input class="form-control" id="discount"   type="number" step="0.01"  placeholder="할인금액" required="optional" data-validation-required-message="할인금액을 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Product Catogory</label>
+                        <input class="form-control" id="product_category"  type="text" placeholder="상품 카테고리(A.B.C.D.E)" required="optional" data-validation-required-message="상품 카테고리 정보를 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Currency Code</label>
+                        <input class="form-control" id="currency_code"  type="text"  placeholder="구매화폐단위(KRW, USD, ...)" required="optional" data-validation-required-message="구매 화폐 단위를 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-primary btn-xl" >Call Native Function</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Share Modal -->
+    <div class="portfolio-modal mfp-hide" id="commerce-share-modal">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">공유하기</h2>
+              <hr class="star-dark mb-5" style="margin-bottom:100px !important;">
+              <p class="mb-5">고객이 상품을 공유했을 때, 상품의 상세 정보를 포함하여 공유하기 이벤트를 전달합니다.</p>
+              <p class="mb-5">share api 를 이용하여야 하며 상품아이디, 상품명, 상품단가, 상품 카테고리 정보를 필수로 전달하여야 합니다.</p>
+              <p class="mb-5">본 샘플에서는 adbrix://share? 와 같은 JavaScript Interface를 구성하여 데이터를 전달합니다.</p>
+              <p class="mb-5">아래 데이터 중 * 표시가 된 것은 필수 전달 데이터 항목입니다.</p>
+              <div class="row">
+                <div class="col-lg-10 mx-auto">
+                  <form name="shareMessage" id="shareForm" novalidate="novalidate">
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                          <label>Sharing Channel</label>
+                          <input class="form-control" id="sharing_channel" type="text" placeholder="*공유채널" required="required" data-validation-required-message="공유채널을 입력해주세요." aria-invalid="false">
+                          <p class="help-block text-danger"></p>
+                        </div>
+                      </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Product Id</label>
+                        <input class="form-control" id="product_id" type="text" placeholder="*상품아이디" required="required" data-validation-required-message="상품아이디를 입력해주세요." aria-invalid="false">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Product Name</label>
+                        <input class="form-control" id="product_name" type="text" placeholder="*상품명" required="required" data-validation-required-message="상품명을 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Unit Price</label>
+                        <input class="form-control" id="unit_price"  type="number" step="0.01" placeholder="*상품단가" required="required" data-validation-required-message="상품단가를 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Quantity</label>
+                        <input class="form-control" id="quantity"  type="number" placeholder="*구매수량" required="required" data-validation-required-message="구매수량을 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Discount</label>
+                        <input class="form-control" id="discount"   type="number" step="0.01" placeholder="할인금액" required="optional" data-validation-required-message="할인금액을 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Product Catogory</label>
+                        <input class="form-control" id="product_category"  type="text" placeholder="상품 카테고리(A.B.C.D.E)" required="optional" data-validation-required-message="상품 카테고리 정보를 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Currency Code</label>
+                        <input class="form-control" id="currency_code"  type="text"  placeholder="구매화폐단위(KRW, USD, ...)" required="optional" data-validation-required-message="구매 화폐 단위를 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-primary btn-xl" >Call Native Function</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AddToCart Modal -->
+    <div class="portfolio-modal mfp-hide" id="commerce-addtocart-modal">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">장바구니 담기</h2>
+              <hr class="star-dark mb-5" style="margin-bottom:100px !important;">
+              <p class="mb-5">고객이 상품을 장바구니에 담았을 때, 상품의 상세 정보를 포함하여 장바구니담기 이벤트를 전달합니다.</p>
+              <p class="mb-5">addToCart api 를 이용하여야 하며 상품아이디, 상품명, 상품단가, 구매수량, 상품 카테고리 정보를 필수로 전달하여야 합니다.</p>
+              <p class="mb-5">본 샘플에서는 adbrix://addToCart? 와 같은 JavaScript Interface를 구성하여 데이터를 전달합니다.</p>
+              <p class="mb-5">아래 데이터 중 * 표시가 된 것은 필수 전달 데이터 항목입니다.</p>
+              <div class="row">
+                <div class="col-lg-10 mx-auto">
+                  <form name="addToCartMessage" id="addToCartForm" novalidate="novalidate">
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Product Id</label>
+                        <input class="form-control" id="product_id" type="text" placeholder="*상품아이디" required="required" data-validation-required-message="상품아이디를 입력해주세요." aria-invalid="false">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Product Name</label>
+                        <input class="form-control" id="product_name" type="text" placeholder="*상품명" required="required" data-validation-required-message="상품명을 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Unit Price</label>
+                        <input class="form-control" id="unit_price"  type="number" step="0.01"placeholder="*상품단가" required="required" data-validation-required-message="상품단가를 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Quantity</label>
+                        <input class="form-control" id="quantity"  type="number" placeholder="*구매수량" required="required" data-validation-required-message="구매수량을 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Discount</label>
+                        <input class="form-control" id="discount"  type="number" step="0.01" placeholder="할인금액" required="optional" data-validation-required-message="할인금액을 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Product Catogory</label>
+                        <input class="form-control" id="product_category"  type="text" placeholder="상품 카테고리(A.B.C.D.E)" required="optional" data-validation-required-message="상품 카테고리 정보를 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Currency Code</label>
+                        <input class="form-control" id="currency_code"  type="text"  placeholder="구매화폐단위(KRW, USD, ...)" required="optional" data-validation-required-message="구매 화폐 단위를 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-primary btn-xl" >Call Native Function</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AddToWishList Modal -->
+    <div class="portfolio-modal mfp-hide" id="commerce-addtowishlist-modal">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">관심상품 추가</h2>
+              <hr class="star-dark mb-5" style="margin-bottom:100px !important;">
+              <p class="mb-5">고객이 상품을 관심 상품에 추가했을 때, 상품의 상세 정보를 포함하여 관심상품추가 이벤트를 전달합니다.</p>
+              <p class="mb-5">addToWishList api 를 이용하여야 하며 상품아이디, 상품명, 상품단가, 구매수량, 상품 카테고리 정보를 필수로 전달하여야 합니다.</p>
+              <p class="mb-5">본 샘플에서는 adbrix://addtowishlist? 와 같은 JavaScript Interface를 구성하여 데이터를 전달합니다.</p>
+              <p class="mb-5">아래 데이터 중 * 표시가 된 것은 필수 전달 데이터 항목입니다.</p>
+              <div class="row">
+                <div class="col-lg-10 mx-auto">
+                  <form name="addToWishListMessage" id="addToWishListForm" novalidate="novalidate">
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Product Id</label>
+                        <input class="form-control" id="product_id" type="text" placeholder="*상품아이디" required="required" data-validation-required-message="상품아이디를 입력해주세요." aria-invalid="false">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Product Name</label>
+                        <input class="form-control" id="product_name" type="text" placeholder="*상품명" required="required" data-validation-required-message="상품명을 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Unit Price</label>
+                        <input class="form-control" id="unit_price"  type="number" step="0.01" placeholder="*상품단가" required="required" data-validation-required-message="상품단가를 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Quantity</label>
+                        <input class="form-control" id="quantity"  type="number" placeholder="*구매수량" required="required" data-validation-required-message="구매수량을 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Discount</label>
+                        <input class="form-control" id="discount"  type="number" step="0.01" placeholder="할인금액" required="optional" data-validation-required-message="할인금액을 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Product Catogory</label>
+                        <input class="form-control" id="product_category"  type="text" placeholder="상품 카테고리(A.B.C.D.E)" required="optional" data-validation-required-message="상품 카테고리 정보를 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Currency Code</label>
+                        <input class="form-control" id="currency_code"  type="text"  placeholder="구매화폐단위(KRW, USD, ...)" required="optional" data-validation-required-message="구매 화폐 단위를 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-primary btn-xl" >Call Native Function</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- 
+    Plugin JavaScript
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+     //Contact Form JavaScript 
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    //Custom scripts for this template
+    <script src="js/freelancer.min.js"></script> 
+  -->
+
+    <!-- Function for Adbrix Remaster Javascript Interface -->
+    <script src="js/adbrix_js_handler.js"></script>
+    
+    
+  </body>
+
+</html>
