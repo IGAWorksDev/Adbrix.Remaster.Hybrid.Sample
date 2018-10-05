@@ -5,6 +5,7 @@
 
 ### Html 
 <br>
+ [Help Center](http://help.adbrix.io)
 [Sample_web_page/index.html](https://github.com/IGAWorksDev/Adbrix.Remaster.Hybrid.Sample/blob/master/sample_proj/web/index.html) 파일을 참고해주세요.
 
 <br>
