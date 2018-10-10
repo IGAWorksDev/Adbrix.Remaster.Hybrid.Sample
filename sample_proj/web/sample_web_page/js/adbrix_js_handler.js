@@ -1,5 +1,15 @@
 if (!jQuery) { throw new Error("Adbrix Hybrid Sample requires jQuery") }
 
+String.format = function() {
+    var str = arguments[0];    
+    for (var i = 1; i < arguments.length; i++) {
+        var regEx = new RegExp("\\{" + (i - 1) + "\\}", "gm");
+        str = str.replace(regEx, arguments[i]);
+    }    
+    return str;
+}
+
+
 var is_android = false; //initiate as false
 var is_ios = false; //initiate as false
 
@@ -51,6 +61,11 @@ $("#purchaseForm").submit(function( event ) {
 
     if(is_android) {
         window.adbrix.purchase(orderId, productId, productName, unitPrice, quantity, currencyCode, category);
+    }else if(is_ios){
+        var query_form = "orderId={0}&productId={1}&productName={2}&unitPrice={3}&quantity={4}&currencyCode={5}&category={6}";
+        window.location("adbrix://purchase?" + String.format(query_form, orderId, productId, productName, unitPrice, quantity, currencyCode, category) );
+    }else {
+        return;        
     }
     
     event.preventDefault();
@@ -77,6 +92,11 @@ $("#productViewForm").submit(function( event ) {
 
     if(is_android){
         window.adbrix.productView(productId, productName, unitPrice, quantity, currencyCode, category);
+    }else if(is_ios){
+        var query_form = "productId={0}&productName={1}&unitPrice={2}&quantity={3}&currencyCode={4}&category={5}";
+        window.location("adbrix://productView?" + String.format(query_form, productId, productName, unitPrice, quantity, currencyCode, category) );
+    }else {
+        return;        
     }
 
     event.preventDefault();
@@ -102,6 +122,11 @@ $("#viewListForm").submit(function( event ) {
     
     if(is_android){
         window.adbrix.viewList(productId, productName, unitPrice, quantity, currencyCode, category);
+    }else if(is_ios){
+        var query_form = "productId={0}&productName={1}&unitPrice={2}&quantity={3}&currencyCode={4}&category={5}";
+        window.location("adbrix://viewList?" + String.format(query_form, productId, productName, unitPrice, quantity, currencyCode, category) );
+    }else {
+        return;        
     }
 
     event.preventDefault();
@@ -127,6 +152,11 @@ $("#addToCartForm").submit(function( event ) {
     
     if(is_android){
         window.adbrix.addToCart(productId, productName, unitPrice, quantity, currencyCode, category);
+    }else if(is_ios){
+        var query_form = "productId={0}&productName={1}&unitPrice={2}&quantity={3}&currencyCode={4}&category={5}";
+        window.location("adbrix://addToCart?" + String.format(query_form, productId, productName, unitPrice, quantity, currencyCode, category) );
+    }else {
+        return;        
     }
 
     event.preventDefault();
@@ -152,6 +182,11 @@ $("#addToWishListForm").submit(function( event ) {
             
     if(is_android){
         window.adbrix.addToWishList(productId, productName, unitPrice, quantity, currencyCode, category);
+    }else if(is_ios){
+        var query_form = "productId={0}&productName={1}&unitPrice={2}&quantity={3}&currencyCode={4}&category={5}";
+        window.location("adbrix://addToWishList?" + String.format(query_form, productId, productName, unitPrice, quantity, currencyCode, category) );
+    }else {
+        return;        
     }
 
 
@@ -185,6 +220,11 @@ $("#shareForm").submit(function( event ) {
             
     if(is_android){
         window.adbrix.share(sharingChannel, productId, productName, unitPrice, quantity, currencyCode, category);
+    }else if(is_ios){
+        var query_form = "sharingChannel={0}&productId={1}&productName={2}&unitPrice={3}&quantity={4}&currencyCode={5}&category={6}";
+        window.location("adbrix://share?" + String.format(query_form, sharingChannel, productId, productName, unitPrice, quantity, currencyCode, category) );
+    }else {
+        return;        
     }
 
     event.preventDefault();
