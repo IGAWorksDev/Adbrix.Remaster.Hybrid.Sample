@@ -231,3 +231,24 @@ $("#shareForm").submit(function( event ) {
 });
 
 
+
+/**
+ * Auto Fill Purchase Sample Data 
+ */
+
+$("#fill_purchase_data_btn").click(function(){
+
+    console.log("test btn clicked!");
+    $('#purchaseForm').find('input[id="order_id"]').val() = "oid100001";
+    $('#purchaseForm').find('input[id="product_id"]').val() = "pid200002";
+    $('#purchaseForm').find('input[id="product_name"]').val() = "sample_prodcut_name";
+    $('#purchaseForm').find('input[id="unit_price"]').val() = 9900.00;
+    $('#purchaseForm').find('input[id="quantity"]').val() = 3;
+    $('#purchaseForm').find('input[id="discount"]').val() = 2000.00;
+    $('#purchaseForm').find('input[id="product_category"]').val() = "A.B.C.D.E";
+    $('#purchaseForm').find('input[id="currency_code"]').val() = "KRW";
+
+    event.preventDefault();
+
+});
+
