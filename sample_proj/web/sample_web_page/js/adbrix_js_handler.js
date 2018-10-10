@@ -230,3 +230,36 @@ $("#shareForm").submit(function( event ) {
     event.preventDefault();
 });
 
+
+/* search */
+$("#searchForm").submit(function( event ) {
+
+    keyword = $('#searchForm').find('input[id="keyword"]').val();
+    productId = $('#searchForm').find('input[id="product_id"]').val();
+    productName = encodeURIComponent($('#searchForm').find('input[id="product_name"]').val());
+    unitPrice = $('#searchForm').find('input[id="unit_price"]').val();
+    quantity = $('#searchForm').find('input[id="quantity"]').val();
+    discount = $('#searchForm').find('input[id="discount"]').val();
+    category = encodeURIComponent($('#searchForm').find('input[id="product_category"]').val());
+    currencyCode = $('#searchForm').find('input[id="currency_code"]').val();
+
+    console.log("search data ::: "         
+        + "\n keyword :: "  + keyword
+        + "\n productId :: "  + productId
+        + "\n productName :: "  + productName
+        + "\n quantity :: "  + quantity
+        + "\n currencyCode :: "  + currencyCode
+        + "\n category :: "  + category);
+            
+    if(is_android){
+        window.adbrix.search(keyword, productId, productName, unitPrice, quantity, currencyCode, category);
+    }else if(is_ios){
+        var query_form = "keyword={0}&productId={1}&productName={2}&unitPrice={3}&quantity={4}&currencyCode={5}&category={6}";
+        window.location.href = "adbrix://search?" + String.format(query_form, sharingChannel, productId, productName, unitPrice, quantity, currencyCode, category);
+    }else {
+        return;        
+    }
+
+    event.preventDefault();
+});
+

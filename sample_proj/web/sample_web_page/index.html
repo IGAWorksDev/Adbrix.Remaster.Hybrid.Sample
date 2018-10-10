@@ -125,6 +125,18 @@
 
             </a>
           </div>
+          <div class="col-md-6 col-lg-4 bottom-margin">
+            <a class="portfolio-item d-block mx-auto" href="#commerce-share-modal">
+              <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
+                <div class="portfolio-item-caption-content my-auto w-100 text-center text-white">
+                  <i class="fas fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <h3>7. 검색하기</h3>
+              <p>고객이 특정 키워드를 이용하여 검색을 했을 때에 search api를 이용하여 검색어와 검색된 상품의 정보가 포함된 이벤트를 전달합니다.</p>
+
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -642,6 +654,96 @@
           </div>
         </div>
       </div>
+
+    <!-- Search Modal -->
+    <div class="portfolio-modal mfp-hide" id="commerce-search-modal">
+      <div class="portfolio-modal-dialog bg-white">
+        <a class="close-button d-none d-md-block portfolio-modal-dismiss" href="#">
+          <i class="fa fa-3x fa-times"></i>
+        </a>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-10 mx-auto">
+              <h2 class="text-secondary text-uppercase mb-0">검색하기</h2>
+              <hr class="star-dark mb-5" style="margin-bottom:100px !important;">
+              <p class="mb-5">고객이 특정 키워드로 검색을 했을 때, 검색된 상품의 상세 정보를 포함하여 검색 이벤트를 전달합니다.</p>
+              <p class="mb-5">search api 를 이용하여야 하며 검색키워드, 상품아이디, 상품명, 상품단가, 구매수량, 상품 카테고리 정보를 필수로 전달하여야 합니다.</p>
+              <p class="mb-5">본 샘플에서는 adbrix://search? 와 같은 JavaScript Interface를 구성하여 데이터를 전달합니다.</p>
+              <p class="mb-5">아래 데이터 중 * 표시가 된 것은 필수 전달 데이터 항목입니다.</p>
+              <div class="row">
+                <div class="col-lg-10 mx-auto">
+                  <form name="addToWishListMessage" id="addToWishListForm" novalidate="novalidate">
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Keyword</label>
+                        <input class="form-control" id="keyword" type="text" placeholder="*키워드" required="required" data-validation-required-message="키워드를 입력해주세요." aria-invalid="false">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Product Id</label>
+                        <input class="form-control" id="product_id" type="text" placeholder="*상품아이디" required="required" data-validation-required-message="상품아이디를 입력해주세요." aria-invalid="false">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Product Name</label>
+                        <input class="form-control" id="product_name" type="text" placeholder="*상품명" required="required" data-validation-required-message="상품명을 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Unit Price</label>
+                        <input class="form-control" id="unit_price"  type="number" step="0.01" placeholder="*상품단가" required="required" data-validation-required-message="상품단가를 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Quantity</label>
+                        <input class="form-control" id="quantity"  type="number" placeholder="*구매수량" required="required" data-validation-required-message="구매수량을 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Discount</label>
+                        <input class="form-control" id="discount"  type="number" step="0.01" placeholder="할인금액" required="optional" data-validation-required-message="할인금액을 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Product Catogory</label>
+                        <input class="form-control" id="product_category"  type="text" placeholder="상품 카테고리(A.B.C.D.E)" required="optional" data-validation-required-message="상품 카테고리 정보를 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                        <label>Currency Code</label>
+                        <input class="form-control" id="currency_code"  type="text"  placeholder="구매화폐단위(KRW, USD, ...)" required="optional" data-validation-required-message="구매 화폐 단위를 입력해주세요.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-primary btn-xl" >Call Native Function</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
     </div>
 
       <!-- Bootstrap core JavaScript -->
