@@ -9,7 +9,6 @@ String.format = function() {
     return str;
 }
 
-
 var is_android = false; //initiate as false
 var is_ios = false; //initiate as false
 
@@ -234,7 +233,7 @@ $("#shareForm").submit(function( event ) {
 /* search */
 $("#searchForm").submit(function( event ) {
 
-    keyword = $('#searchForm').find('input[id="keyword"]').val();
+    keyword = encodeURIComponent($('#searchForm').find('input[id="keyword"]').val());
     productId = $('#searchForm').find('input[id="product_id"]').val();
     productName = encodeURIComponent($('#searchForm').find('input[id="product_name"]').val());
     unitPrice = $('#searchForm').find('input[id="unit_price"]').val();
