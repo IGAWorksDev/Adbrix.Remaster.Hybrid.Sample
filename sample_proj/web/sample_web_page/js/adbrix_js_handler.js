@@ -51,12 +51,13 @@ $("#purchaseForm").submit(function( event ) {
     currencyCode = $('#purchaseForm').find('input[id="currency_code"]').val();
 
     console.log("purchase data ::: " 
-        + "\n orderId :: "  + orderId
-        + "\n productId :: "  + productId
-        + "\n productName :: "  + productName
-        + "\n quantity :: "  + quantity
-        + "\n currencyCode :: "  + currencyCode
-        + "\n category :: "  + category);
+        + "\n > orderId :: "  + orderId
+        + "\n > productId :: "  + productId
+        + "\n > productName :: "  + productName
+        + "\n > unitPrice :: "  + unitPrice
+        + "\n > quantity :: "  + quantity
+        + "\n > currencyCode :: "  + currencyCode
+        + "\n > category :: "  + category);
 
     if(is_android) {
         window.adbrix.purchase(orderId, productId, productName, unitPrice, quantity, currencyCode, category);
@@ -64,7 +65,7 @@ $("#purchaseForm").submit(function( event ) {
         var query_form = "orderId={0}&productId={1}&productName={2}&unitPrice={3}&quantity={4}&currencyCode={5}&category={6}";
         window.location.href = "adbrix://purchase?" + String.format(query_form, orderId, productId, productName, unitPrice, quantity, currencyCode, category);
     }else {
-        return;        
+        console.log("please test with webview.");
     }
     
     event.preventDefault();
@@ -83,11 +84,12 @@ $("#productViewForm").submit(function( event ) {
     currencyCode = $('#productViewForm').find('input[id="currency_code"]').val();
 
     console.log("productView data ::: "         
-        + "\n productId :: "  + productId
-        + "\n productName :: "  + productName
-        + "\n quantity :: "  + quantity
-        + "\n currencyCode :: "  + currencyCode
-        + "\n category :: "  + category);
+        + "\n > productId :: "  + productId
+        + "\n > productName :: "  + productName
+        + "\n > unitPrice :: "  + unitPrice
+        + "\n > quantity :: "  + quantity
+        + "\n > currencyCode :: "  + currencyCode
+        + "\n > category :: "  + category);
 
     if(is_android){
         window.adbrix.productView(productId, productName, unitPrice, quantity, currencyCode, category);
@@ -95,7 +97,7 @@ $("#productViewForm").submit(function( event ) {
         var query_form = "productId={0}&productName={1}&unitPrice={2}&quantity={3}&currencyCode={4}&category={5}";
         window.location.href = "adbrix://productView?" + String.format(query_form, productId, productName, unitPrice, quantity, currencyCode, category);
     }else {
-        return;        
+        console.log("please test with webview.");     
     }
 
     event.preventDefault();
@@ -113,11 +115,12 @@ $("#viewListForm").submit(function( event ) {
     currencyCode = $('#viewListForm').find('input[id="currency_code"]').val();
 
     console.log("viewList data ::: "         
-        + "\n productId :: "  + productId
-        + "\n productName :: "  + productName
-        + "\n quantity :: "  + quantity
-        + "\n currencyCode :: "  + currencyCode
-        + "\n category :: "  + category);
+        + "\n > productId :: "  + productId
+        + "\n > productName :: "  + productName
+        + "\n > unitPrice :: "  + unitPrice
+        + "\n > quantity :: "  + quantity
+        + "\n > currencyCode :: "  + currencyCode
+        + "\n > category :: "  + category);
     
     if(is_android){
         window.adbrix.viewList(productId, productName, unitPrice, quantity, currencyCode, category);
@@ -125,7 +128,7 @@ $("#viewListForm").submit(function( event ) {
         var query_form = "productId={0}&productName={1}&unitPrice={2}&quantity={3}&currencyCode={4}&category={5}";
         window.location.href = "adbrix://viewList?" + String.format(query_form, productId, productName, unitPrice, quantity, currencyCode, category);
     }else {
-        return;        
+        console.log("please test with webview.");     
     }
 
     event.preventDefault();
@@ -143,11 +146,12 @@ $("#addToCartForm").submit(function( event ) {
     currencyCode = $('#addToCartForm').find('input[id="currency_code"]').val();
 
     console.log("addToCart data ::: "         
-        + "\n productId :: "  + productId
-        + "\n productName :: "  + productName
-        + "\n quantity :: "  + quantity
-        + "\n currencyCode :: "  + currencyCode
-        + "\n category :: "  + category);
+        + "\n > productId :: "  + productId
+        + "\n > productName :: "  + productName
+        + "\n > unitPrice :: "  + unitPrice
+        + "\n > quantity :: "  + quantity
+        + "\n > currencyCode :: "  + currencyCode
+        + "\n > category :: "  + category);
     
     if(is_android){
         window.adbrix.addToCart(productId, productName, unitPrice, quantity, currencyCode, category);
@@ -155,7 +159,7 @@ $("#addToCartForm").submit(function( event ) {
         var query_form = "productId={0}&productName={1}&unitPrice={2}&quantity={3}&currencyCode={4}&category={5}";
         window.location.href = "adbrix://addToCart?" + String.format(query_form, productId, productName, unitPrice, quantity, currencyCode, category);
     }else {
-        return;        
+        console.log("please test with webview.");     
     }
 
     event.preventDefault();
@@ -173,11 +177,12 @@ $("#addToWishListForm").submit(function( event ) {
     currencyCode = $('#addToWishListForm').find('input[id="currency_code"]').val();
 
     console.log("addToWishList data ::: "         
-        + "\n productId :: "  + productId
-        + "\n productName :: "  + productName
-        + "\n quantity :: "  + quantity
-        + "\n currencyCode :: "  + currencyCode
-        + "\n category :: "  + category);
+        + "\n > productId :: "  + productId
+        + "\n > productName :: "  + productName
+        + "\n > unitPrice :: "  + unitPrice
+        + "\n > quantity :: "  + quantity
+        + "\n > currencyCode :: "  + currencyCode
+        + "\n > category :: "  + category);
             
     if(is_android){
         window.adbrix.addToWishList(productId, productName, unitPrice, quantity, currencyCode, category);
@@ -185,7 +190,7 @@ $("#addToWishListForm").submit(function( event ) {
         var query_form = "productId={0}&productName={1}&unitPrice={2}&quantity={3}&currencyCode={4}&category={5}";
         window.location.href = "adbrix://addToWishList?" + String.format(query_form, productId, productName, unitPrice, quantity, currencyCode, category);
     }else {
-        return;        
+        console.log("please test with webview.");     
     }
 
 
@@ -210,12 +215,13 @@ $("#shareForm").submit(function( event ) {
     currencyCode = $('#shareForm').find('input[id="currency_code"]').val();
 
     console.log("share data ::: "         
-        + "\n sharingChannel :: "  + sharingChannel
-        + "\n productId :: "  + productId
-        + "\n productName :: "  + productName
-        + "\n quantity :: "  + quantity
-        + "\n currencyCode :: "  + currencyCode
-        + "\n category :: "  + category);
+        + "\n > sharingChannel :: "  + sharingChannel
+        + "\n > productId :: "  + productId
+        + "\n > productName :: "  + productName
+        + "\n > unitPrice :: "  + unitPrice
+        + "\n > quantity :: "  + quantity
+        + "\n > currencyCode :: "  + currencyCode
+        + "\n > category :: "  + category);
             
     if(is_android){
         window.adbrix.share(sharingChannel, productId, productName, unitPrice, quantity, currencyCode, category);
@@ -223,7 +229,7 @@ $("#shareForm").submit(function( event ) {
         var query_form = "sharingChannel={0}&productId={1}&productName={2}&unitPrice={3}&quantity={4}&currencyCode={5}&category={6}";
         window.location.href = "adbrix://share?" + String.format(query_form, sharingChannel, productId, productName, unitPrice, quantity, currencyCode, category);
     }else {
-        return;        
+        console.log("please test with webview.");     
     }
 
     event.preventDefault();
@@ -243,12 +249,13 @@ $("#searchForm").submit(function( event ) {
     currencyCode = $('#searchForm').find('input[id="currency_code"]').val();
 
     console.log("search data ::: "         
-        + "\n keyword :: "  + keyword
-        + "\n productId :: "  + productId
-        + "\n productName :: "  + productName
-        + "\n quantity :: "  + quantity
-        + "\n currencyCode :: "  + currencyCode
-        + "\n category :: "  + category);
+        + "\n > keyword :: "  + keyword
+        + "\n > productId :: "  + productId
+        + "\n > productName :: "  + productName
+        + "\n > unitPrice :: "  + unitPrice
+        + "\n > quantity :: "  + quantity
+        + "\n > currencyCode :: "  + currencyCode
+        + "\n > category :: "  + category);
             
     if(is_android){
         window.adbrix.search(keyword, productId, productName, unitPrice, quantity, currencyCode, category);
@@ -256,7 +263,7 @@ $("#searchForm").submit(function( event ) {
         var query_form = "keyword={0}&productId={1}&productName={2}&unitPrice={3}&quantity={4}&currencyCode={5}&category={6}";
         window.location.href = "adbrix://search?" + String.format(query_form, sharingChannel, productId, productName, unitPrice, quantity, currencyCode, category);
     }else {
-        return;        
+        console.log("please test with webview.");     
     }
 
     event.preventDefault();
