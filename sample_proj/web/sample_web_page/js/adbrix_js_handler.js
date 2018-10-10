@@ -63,7 +63,7 @@ $("#purchaseForm").submit(function( event ) {
         window.adbrix.purchase(orderId, productId, productName, unitPrice, quantity, currencyCode, category);
     }else if(is_ios){
         var query_form = "orderId={0}&productId={1}&productName={2}&unitPrice={3}&quantity={4}&currencyCode={5}&category={6}";
-        window.location("adbrix://purchase?" + String.format(query_form, orderId, productId, productName, unitPrice, quantity, currencyCode, category) );
+        window.location.href = "adbrix://purchase?" + String.format(query_form, orderId, productId, productName, unitPrice, quantity, currencyCode, category);
     }else {
         return;        
     }
@@ -94,7 +94,7 @@ $("#productViewForm").submit(function( event ) {
         window.adbrix.productView(productId, productName, unitPrice, quantity, currencyCode, category);
     }else if(is_ios){
         var query_form = "productId={0}&productName={1}&unitPrice={2}&quantity={3}&currencyCode={4}&category={5}";
-        window.location("adbrix://productView?" + String.format(query_form, productId, productName, unitPrice, quantity, currencyCode, category) );
+        window.location.href = "adbrix://productView?" + String.format(query_form, productId, productName, unitPrice, quantity, currencyCode, category);
     }else {
         return;        
     }
@@ -124,7 +124,7 @@ $("#viewListForm").submit(function( event ) {
         window.adbrix.viewList(productId, productName, unitPrice, quantity, currencyCode, category);
     }else if(is_ios){
         var query_form = "productId={0}&productName={1}&unitPrice={2}&quantity={3}&currencyCode={4}&category={5}";
-        window.location("adbrix://viewList?" + String.format(query_form, productId, productName, unitPrice, quantity, currencyCode, category) );
+        window.location.href = "adbrix://viewList?" + String.format(query_form, productId, productName, unitPrice, quantity, currencyCode, category);
     }else {
         return;        
     }
@@ -154,7 +154,7 @@ $("#addToCartForm").submit(function( event ) {
         window.adbrix.addToCart(productId, productName, unitPrice, quantity, currencyCode, category);
     }else if(is_ios){
         var query_form = "productId={0}&productName={1}&unitPrice={2}&quantity={3}&currencyCode={4}&category={5}";
-        window.location("adbrix://addToCart?" + String.format(query_form, productId, productName, unitPrice, quantity, currencyCode, category) );
+        window.location.href = "adbrix://addToCart?" + String.format(query_form, productId, productName, unitPrice, quantity, currencyCode, category);
     }else {
         return;        
     }
@@ -184,7 +184,7 @@ $("#addToWishListForm").submit(function( event ) {
         window.adbrix.addToWishList(productId, productName, unitPrice, quantity, currencyCode, category);
     }else if(is_ios){
         var query_form = "productId={0}&productName={1}&unitPrice={2}&quantity={3}&currencyCode={4}&category={5}";
-        window.location("adbrix://addToWishList?" + String.format(query_form, productId, productName, unitPrice, quantity, currencyCode, category) );
+        window.location.href = "adbrix://addToWishList?" + String.format(query_form, productId, productName, unitPrice, quantity, currencyCode, category);
     }else {
         return;        
     }
@@ -222,33 +222,11 @@ $("#shareForm").submit(function( event ) {
         window.adbrix.share(sharingChannel, productId, productName, unitPrice, quantity, currencyCode, category);
     }else if(is_ios){
         var query_form = "sharingChannel={0}&productId={1}&productName={2}&unitPrice={3}&quantity={4}&currencyCode={5}&category={6}";
-        window.location("adbrix://share?" + String.format(query_form, sharingChannel, productId, productName, unitPrice, quantity, currencyCode, category) );
+        window.location.href = "adbrix://share?" + String.format(query_form, sharingChannel, productId, productName, unitPrice, quantity, currencyCode, category);
     }else {
         return;        
     }
 
     event.preventDefault();
-});
-
-
-
-/**
- * Auto Fill Purchase Sample Data 
- */
-
-$("#fill_purchase_data_btn").click(function(){
-
-    console.log("test btn clicked!");
-    $('#purchaseForm').find('input[id="order_id"]').val() = "oid100001";
-    $('#purchaseForm').find('input[id="product_id"]').val() = "pid200002";
-    $('#purchaseForm').find('input[id="product_name"]').val() = "sample_prodcut_name";
-    $('#purchaseForm').find('input[id="unit_price"]').val() = 9900.00;
-    $('#purchaseForm').find('input[id="quantity"]').val() = 3;
-    $('#purchaseForm').find('input[id="discount"]').val() = 2000.00;
-    $('#purchaseForm').find('input[id="product_category"]').val() = "A.B.C.D.E";
-    $('#purchaseForm').find('input[id="currency_code"]').val() = "KRW";
-
-    event.preventDefault();
-
 });
 
