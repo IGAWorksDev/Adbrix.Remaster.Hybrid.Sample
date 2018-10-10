@@ -298,6 +298,54 @@ public class AdbrixRmHybridInterface {
                 Log.e(LOG_TAG, "parameter error w/ " + e.getMessage());
             }
         }
+
+
+        @JavascriptInterface
+        public void search(String keyword, String productId, String productName, double price, int quantity, String currencyCode, String category) {
+
+            try {
+
+                Log.d(LOG_TAG, "GET SEARCH EVENT DATA FROM WEB WITH BELOW DATAS  ::: " +
+                        "  \n  keyword :: " + keyword
+                        + "\n  productId :: " + productId
+                        + "\n  productName :: " + productName
+                        + "\n  price :: " + price
+                        + "\n  quantity :: " + quantity
+                        + "\n  discount :: n/a"
+                        + "\n  currencyCode :: " + currencyCode
+                        + "\n  category :: " + category);
+
+                /**
+                 * Create Product Model List For Searched Products Details
+                 * */
+                ArrayList productModelArrayList = new ArrayList<>();
+
+                /**
+                 * Create Product Model With Product Details
+                 * */
+                AdBrixRm.CommerceProductModel productModel =
+                        new AdBrixRm.CommerceProductModel().setProductID(productId)
+                                .setProductName(productName)
+                                .setCategory(new AdBrixRm.CommerceCategoriesModel().setCategory(category))
+                                .setPrice(price)
+                                .setQuantity(quantity)
+                                .setCurrency(AdBrixRm.Currency.getCurrencyByCurrencyCode(currencyCode));
+
+                /**
+                 * Put The Searched Product Details Into Product Model List
+                 * */
+                productModelArrayList.add(productModel);
+
+
+                /**
+                 * Store Search Event Details For Passing Data To Adbrix Remaster Back-end.
+                 * */
+                AdBrixRm.Commerce.search(keyword, productModelArrayList);
+
+            } catch (Exception e) {
+                Log.e(LOG_TAG, "parameter error w/ " + e.getMessage());
+            }
+        }
     }
 
     public void AdbrixRmInit(){
